@@ -1,0 +1,84 @@
+
+I, [2022-01-24T11:32:22.225240 #32314]  INFO -- Module: run..
+I, [2022-01-24T11:32:22.225358 #32314]  INFO -- Fly::Screen: initialize 
+I, [2022-01-24T11:32:22.227024 #32314]  INFO -- Fly::SearchEngines: initialize => Fly::SearchEngines sites => 1377x,clb6
+I, [2022-01-24T11:32:22.227144 #32314]  INFO -- Fly::DownloadEngines: initialize => Fly::DownloadEngines downloader => Fly::Download::WebTorrent
+E, [2022-01-24T11:32:22.232229 #32314] ERROR -- Module: error uninitialized constant Fly::View::ListWindow::Info
+I, [2022-01-24T11:33:26.811534 #33965]  INFO -- Module: run..
+I, [2022-01-24T11:33:26.811656 #33965]  INFO -- Fly::Screen: initialize 
+I, [2022-01-24T11:33:26.812990 #33965]  INFO -- Fly::SearchEngines: initialize => Fly::SearchEngines sites => 1377x,clb6
+I, [2022-01-24T11:33:26.813067 #33965]  INFO -- Fly::DownloadEngines: initialize => Fly::DownloadEngines downloader => Fly::Download::WebTorrent
+I, [2022-01-24T11:33:26.813117 #33965]  INFO -- Fly::Screen: initialize successed
+I, [2022-01-24T11:33:26.813139 #33965]  INFO -- Fly::Screen: screen render...
+I, [2022-01-24T11:33:29.718989 #33965]  INFO -- Fly::Screen: search ipx
+I, [2022-01-24T11:33:29.719542 #33965]  INFO -- Fly::SearchEngines: search  1377x => ipx
+I, [2022-01-24T11:33:29.719703 #33965]  INFO -- Fly::SearchEngines: search  clb6 => ipx
+I, [2022-01-24T11:33:29.723367 #33965]  INFO -- Fly::S1377XSearch: site 1111111=> https://www.1377x.to
+I, [2022-01-24T11:33:29.723740 #33965]  INFO -- Fly::S1377XSearch: request GET https://www.1377x.to/search/ipx/1/ body => 
+I, [2022-01-24T11:33:33.122887 #33965]  INFO -- Fly::SCLB6Search: request GET http://clb6.cc/s/ipx.html body => 
+I, [2022-01-24T11:33:54.510686 #33965]  INFO -- Class:  name => clb6
+I, [2022-01-24T11:33:54.510812 #33965]  INFO -- Fly::SearchEngines:  site => clb6 url => http://clb6.cc/detail/858e534c82ab0e52326d23074c451575fa61bd0b.html search engine => #<Fly::SCLB6Search:0x00007fe6428603a0>
+I, [2022-01-24T11:33:54.510851 #33965]  INFO -- Class:  name => clb6
+I, [2022-01-24T11:33:55.678911 #33965]  INFO -- Fly::SCLB6Search: request GET http://clb6.cc/detail/858e534c82ab0e52326d23074c451575fa61bd0b.html body => 
+I, [2022-01-24T11:33:55.920314 #33965]  INFO -- Fly::SCLB6Search: magnet:?xt=urn:btih:858E534C82AB0E52326D23074C451575FA61BD0B
+I, [2022-01-24T11:33:55.920728 #33965]  INFO -- Fly::System: copy => magnet:?xt=urn:btih:858E534C82AB0E52326D23074C451575FA61BD0B
+I, [2022-01-24T11:33:57.454416 #33965]  INFO -- Class:  name => clb6
+I, [2022-01-24T11:33:57.454554 #33965]  INFO -- Fly::SearchEngines:  site => clb6 url => http://clb6.cc/detail/496cfa72dced7fb34114ed3334600fbc47da3243.html search engine => #<Fly::SCLB6Search:0x00007fe6428603a0>
+I, [2022-01-24T11:33:57.454597 #33965]  INFO -- Class:  name => clb6
+I, [2022-01-24T11:33:57.647069 #33965]  INFO -- Fly::SCLB6Search: request GET http://clb6.cc/detail/496cfa72dced7fb34114ed3334600fbc47da3243.html body => 
+I, [2022-01-24T11:33:57.816304 #33965]  INFO -- Fly::SCLB6Search: magnet:?xt=urn:btih:496CFA72DCED7FB34114ED3334600FBC47DA3243
+I, [2022-01-24T11:33:57.816493 #33965]  INFO -- Fly::System: copy => magnet:?xt=urn:btih:496CFA72DCED7FB34114ED3334600FBC47DA3243
+I, [2022-01-24T11:33:58.855163 #33965]  INFO -- Class:  name => clb6
+I, [2022-01-24T11:33:58.855267 #33965]  INFO -- Fly::SearchEngines:  site => clb6 url => http://clb6.cc/detail/bd7dc979552b60ff0802b58dfcf0a2566cfa7194.html search engine => #<Fly::SCLB6Search:0x00007fe6428603a0>
+I, [2022-01-24T11:33:58.855307 #33965]  INFO -- Class:  name => clb6
+I, [2022-01-24T11:33:58.984452 #33965]  INFO -- Fly::SCLB6Search: request GET http://clb6.cc/detail/bd7dc979552b60ff0802b58dfcf0a2566cfa7194.html body => 
+I, [2022-01-24T11:33:59.289344 #33965]  INFO -- Fly::SCLB6Search: magnet:?xt=urn:btih:BD7DC979552B60FF0802B58DFCF0A2566CFA7194
+I, [2022-01-24T11:33:59.289466 #33965]  INFO -- Fly::System: copy => magnet:?xt=urn:btih:BD7DC979552B60FF0802B58DFCF0A2566CFA7194
+I, [2022-01-24T11:34:00.437640 #33965]  INFO -- Class:  name => clb6
+I, [2022-01-24T11:34:00.437761 #33965]  INFO -- Fly::SearchEngines:  site => clb6 url => http://clb6.cc/detail/cd47f186472d6eba7ade0aac2d6a6690efab7067.html search engine => #<Fly::SCLB6Search:0x00007fe6428603a0>
+I, [2022-01-24T11:34:00.438627 #33965]  INFO -- Class:  name => clb6
+I, [2022-01-24T11:34:00.571262 #33965]  INFO -- Fly::SCLB6Search: request GET http://clb6.cc/detail/cd47f186472d6eba7ade0aac2d6a6690efab7067.html body => 
+I, [2022-01-24T11:34:00.743649 #33965]  INFO -- Fly::SCLB6Search: magnet:?xt=urn:btih:CD47F186472D6EBA7ADE0AAC2D6A6690EFAB7067
+I, [2022-01-24T11:34:00.743889 #33965]  INFO -- Fly::System: copy => magnet:?xt=urn:btih:CD47F186472D6EBA7ADE0AAC2D6A6690EFAB7067
+I, [2022-01-24T11:34:56.091310 #34842]  INFO -- Module: run..
+I, [2022-01-24T11:34:56.091460 #34842]  INFO -- Fly::Screen: initialize 
+I, [2022-01-24T11:34:56.092784 #34842]  INFO -- Fly::SearchEngines: initialize => Fly::SearchEngines sites => 1377x,clb6
+I, [2022-01-24T11:34:56.092862 #34842]  INFO -- Fly::DownloadEngines: initialize => Fly::DownloadEngines downloader => Fly::Download::WebTorrent
+I, [2022-01-24T11:34:56.092911 #34842]  INFO -- Fly::Screen: initialize successed
+I, [2022-01-24T11:34:56.092933 #34842]  INFO -- Fly::Screen: screen render...
+I, [2022-01-24T11:35:03.935633 #34842]  INFO -- Fly::Screen: search ipx
+I, [2022-01-24T11:35:03.935964 #34842]  INFO -- Fly::SearchEngines: search  clb6 => ipx
+I, [2022-01-24T11:35:03.936129 #34842]  INFO -- Fly::SearchEngines: search  1377x => ipx
+I, [2022-01-24T11:35:03.937567 #34842]  INFO -- Fly::S1377XSearch: site 1111111=> https://www.1377x.to
+I, [2022-01-24T11:35:03.937742 #34842]  INFO -- Fly::S1377XSearch: request GET https://www.1377x.to/search/ipx/1/ body => 
+I, [2022-01-24T11:35:04.299251 #34842]  INFO -- Fly::SCLB6Search: request GET http://clb6.cc/s/ipx.html body => 
+I, [2022-01-24T11:38:46.945812 #36193]  INFO -- Module: run..
+I, [2022-01-24T11:38:46.945972 #36193]  INFO -- Fly::Screen: initialize 
+I, [2022-01-24T11:38:46.953857 #36193]  INFO -- Fly::SearchEngines: initialize => Fly::SearchEngines sites => 1377x,clb6
+I, [2022-01-24T11:38:46.954139 #36193]  INFO -- Fly::DownloadEngines: initialize => Fly::DownloadEngines downloader => Fly::Download::WebTorrent
+I, [2022-01-24T11:38:46.954466 #36193]  INFO -- Fly::Screen: initialize successed
+I, [2022-01-24T11:38:46.955138 #36193]  INFO -- Fly::Screen: screen render...
+I, [2022-01-24T11:38:57.284993 #36193]  INFO -- Fly::Screen: search 樱空桃
+I, [2022-01-24T11:38:57.285401 #36193]  INFO -- Fly::SearchEngines: search  clb6 => 樱空桃
+I, [2022-01-24T11:38:57.285695 #36193]  INFO -- Fly::SearchEngines: search  1377x => 樱空桃
+I, [2022-01-24T11:38:57.286904 #36193]  INFO -- Fly::S1377XSearch: site 1111111=> https://www.1377x.to
+I, [2022-01-24T11:38:57.287070 #36193]  INFO -- Fly::S1377XSearch: request GET https://www.1377x.to/search/樱空桃/1/ body => 
+I, [2022-01-24T11:38:57.553060 #36193]  INFO -- Fly::SCLB6Search: request GET http://clb6.cc/s/樱空桃.html body => 
+I, [2022-01-24T11:39:43.699729 #36193]  INFO -- Fly::Screen: search 暗黑
+I, [2022-01-24T11:39:43.701174 #36193]  INFO -- Fly::SearchEngines: search  clb6 => 暗黑
+I, [2022-01-24T11:39:43.701377 #36193]  INFO -- Fly::SearchEngines: search  1377x => 暗黑
+I, [2022-01-24T11:39:43.702672 #36193]  INFO -- Fly::S1377XSearch: site 1111111=> https://www.1377x.to
+I, [2022-01-24T11:39:43.703019 #36193]  INFO -- Fly::S1377XSearch: request GET https://www.1377x.to/search/暗黑/1/ body => 
+I, [2022-01-24T11:39:43.883103 #36193]  INFO -- Fly::SCLB6Search: request GET http://clb6.cc/s/暗黑.html body => 
+I, [2022-01-24T11:40:25.316036 #36193]  INFO -- Fly::Screen: search 权利的游戏
+I, [2022-01-24T11:40:25.317478 #36193]  INFO -- Fly::SearchEngines: search  clb6 => 权利的游戏
+I, [2022-01-24T11:40:25.317589 #36193]  INFO -- Fly::SearchEngines: search  1377x => 权利的游戏
+I, [2022-01-24T11:40:25.317647 #36193]  INFO -- Fly::S1377XSearch: site 1111111=> https://www.1377x.to
+I, [2022-01-24T11:40:25.318351 #36193]  INFO -- Fly::S1377XSearch: request GET https://www.1377x.to/search/权利的游戏/1/ body => 
+I, [2022-01-24T11:40:25.499624 #36193]  INFO -- Fly::SCLB6Search: request GET http://clb6.cc/s/权利的游戏.html body => 
+I, [2022-01-24T11:53:40.794460 #36193]  INFO -- Fly::Screen: search 低俗怪谈
+I, [2022-01-24T11:53:40.797384 #36193]  INFO -- Fly::SearchEngines: search  clb6 => 低俗怪谈
+I, [2022-01-24T11:53:40.797606 #36193]  INFO -- Fly::SearchEngines: search  1377x => 低俗怪谈
+I, [2022-01-24T11:53:40.803780 #36193]  INFO -- Fly::S1377XSearch: site 1111111=> https://www.1377x.to
+I, [2022-01-24T11:53:40.804152 #36193]  INFO -- Fly::S1377XSearch: request GET https://www.1377x.to/search/低俗怪谈/1/ body => 
+I, [2022-01-24T11:53:42.061809 #36193]  INFO -- Fly::SCLB6Search: request GET http://clb6.cc/s/低俗怪谈.html body => 
