@@ -9,7 +9,6 @@ module Fly
       end
       def search(kw)
         # https://www.1377x.to/search/12/1/
-        Fly::Log.info(self,"site 1111111=> #{site}")
         results = []
         request("#{site}/search/#{kw}/1/",headers: headers) do | res |
           doc = Nokogiri::HTML.parse(res.to_s)
@@ -20,30 +19,7 @@ module Fly
             hot = tr.xpath('td[@class="coll-2 seeds"]').first.content
             date = tr.xpath('td[@class="coll-date"]').first.content
             size = tr.xpath('td[@class="coll-4 size mob-uploader"]').first.content
-            SearchItem.new(
-              id: Fly.next_id,
-              site: site,
-              url: site + href,
-              title: title.strip,
-              date: date,
-              hot: hot,
-              size: size,
-              summary: '',
-              file_type: '未知'
-            )
-            data = { 
-              site: site,
-              url: site + href,
-              title: title.strip,
-              date: date,
-              hot: hot,
-              size: size,
-              desc: '',
-              type: '未知'
-            } 
-            desc = fill(data)
-            data[:desc] = desc
-            data
+            SearchItem.new( id: Fly.next_id, site: site, url: site + href, title: title.strip, date: date, hot: hot, size: size, summary: '', file_type: '未知')
           end
         end
         results

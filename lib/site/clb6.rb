@@ -35,16 +35,7 @@ module Fly
               file_size = file_info[2].content if file_info[2]
               file_hot = file_info[3].content if file_info[3]
             end
-            SearchItem.new(
-              site: site,
-              summary: desc,
-              url: site + href,
-              title: title,
-              date: create_date,
-              file_type: file_type,
-              size: file_size.strip,
-              hot: file_hot,
-            )
+            SearchItem.new( site: site, summary: desc, url: site + href, title: title, date: create_date, file_type: file_type, size: file_size.strip, hot: file_hot,)
             end
           end
         end

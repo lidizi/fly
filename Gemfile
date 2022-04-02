@@ -14,4 +14,13 @@ gem 'byebug'
 gem 'bundle'
 gem 'yard'
 gem 'curses'
+
+gem 'rubocop', require: false
+gem 'activerecord'
+
+gem "clipboard"
+gem "ffi", :platforms => [:mswin, :mingw]
+gem 'solargraph'
+gem "tty-prompt"
+# gem 'optparse'
 # gem 'solargraph'

@@ -5,25 +5,25 @@ module Fly
     end
   end
   class DownloadEngines
-    def self.download_engines(name)
-      downloader = nil
-      case name.downcase
-      when "aria2"
-        downloader = Download::Aria2.new
-      when "webtorrent"
-        downloader = Download::WebTorrent.new
-      else 
-        downloader = Download::Aria2.new
-      end
-      downloader
-    end
+    @@download_engines = {}
+    # def self.download_engines(name)
+    #   DownloadEngines.download_engines(name)
+    # end
     attr_accessor :downloader
-    def initialize(name)
-      @downloader = DownloadEngines.download_engines(name)
-      Fly::Log.info(self,"initialize => #{self.class} downloader => #{@downloader.class}")
+    def initialize
+      @@download_engines = {
+        default: Download::Aria2.new,
+        aria2: Download::Aria2.new,
+        webtorrent: Download::WebTorrent.new,
+      }
     end
     def download(url,options = {})
-      @downloader.download(url,options)
+      _engine = if options[:download]
+        options[:download]
+      else 
+        options[:default]
+      end
+      @@download_engines[_engine].download(url)
     end
     def player? 
       @downloader.player?

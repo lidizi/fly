@@ -10,7 +10,7 @@ module Fly
       def player?
         false
       end
-      def download(source,**options)
+      def download(source,options = {})
         start unless started?
         options = (options || {}).merge({ 
           #"bt-stop-timeout": str(STOP_TIMEOUT),
@@ -23,7 +23,6 @@ module Fly
         aria2_rpc("aria2.addUri",data)
         #status("d7153f5bf5662440")
       end
-
 
       private 
       def load_config

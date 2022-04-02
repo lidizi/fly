@@ -1,4 +1,3 @@
-require_relative 'template/template_helper'
 module Fly 
 class SearchEngines
   @@search_engines = {}
@@ -13,14 +12,13 @@ class SearchEngines
       # Fly::Log.info(self,"site => #{site}")
       class_name = "Fly::S#{site.upcase}Search" 
       Fly.class_eval (
-        <<~EOF 
+        <<~RUBY
         class #{class_name} < Fly::Search::Base
-        # include #{site.upcase}FlySite
-        include Fly::Search::S#{site.upcase}Site
-        def initialize 
+          include Fly::Search::S#{site.upcase}Site
+          def initialize 
+          end
         end
-        end
-        EOF
+        RUBY
       )
       [site,Object::const_get(class_name).new]
     }.collect{|item| item}]
@@ -63,7 +61,6 @@ class SearchEngines
 end
 module Search 
   class SearchItem 
-    include Fly::TemplateHelper
     attr_accessor :id,:site,:url,:title,:size,:hot,:summary,:file_type,:date
     def initialize(**options)
       @id = options.delete(:id)
@@ -87,7 +84,6 @@ module Search
   end
   class Base
     include Fly::HTTPHelper
-    include Fly::TemplateHelper
     attr_accessor :kw,:results,:headers,:log
     def initialize 
       @log = Fly.logger_for(self)
@@ -96,21 +92,6 @@ module Search
     end
     def headers 
     end
-    # def generate_select_menus
-    #   menus = @results.map do | result |
-    #     site = result[:site].gsub(%r{http:\/\/|https:\/\/|www\.|\..*?$},'')
-    #     Fly::Log.info(self,"site => #{site}")
-    #     fp = File.join(Fly::CACHE_DIR,"search",site,@kw,result[:title][0..10].gsub(' ',''))
-    #     next if File.exist?(fp)
-    #     FileUtils.mkdir_p(File.dirname(fp)) unless File.exist?(File.dirname(fp))
-    #     Fly::Log.info(self,result)
-    #     File.open(fp,'w+') do | f |
-    #       f.write(fill(result))
-    #     end
-    #     fp
-    #   end
-    #   menus
-    # end
   end
   end
 end
