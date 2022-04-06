@@ -51,3 +51,24 @@ I, [2022-04-02T08:44:19.326201 #18726]  INFO -- Fly::SearchEngines:  site => clb
 I, [2022-04-02T08:44:19.326222 #18726]  INFO -- Class:  name => clb6
 I, [2022-04-02T08:44:19.802262 #18726]  INFO -- Fly::SCLB6Search: request GET http://clb6.cc/detail/6237978cde2e026d979f45f40b806448261516ee.html body => 
 I, [2022-04-02T08:44:20.242533 #18726]  INFO -- Fly::SCLB6Search: magnet:?xt=urn:btih:6237978CDE2E026D979F45F40B806448261516EE
+I, [2022-04-06T02:22:42.906457 #59988]  INFO -- Fly::SearchEngines: initialize => Fly::SearchEngines sites => 1377x,clb6
+I, [2022-04-06T02:23:14.707441 #60588]  INFO -- Fly::SearchEngines: initialize => Fly::SearchEngines sites => 1377x,clb6
+I, [2022-04-06T02:23:14.707674 #60588]  INFO -- Fly::SearchEngines: search  1377x => 你好
+I, [2022-04-06T02:23:14.707812 #60588]  INFO -- Fly::SearchEngines: search  clb6 => 你好
+I, [2022-04-06T02:23:14.707981 #60588]  INFO -- Fly::S1377XSearch: request GET https://www.1377x.to/search/你好/1/ body => 
+I, [2022-04-06T02:23:15.168078 #60588]  INFO -- Fly::SCLB6Search: request GET http://clb6.cc/s/你好.html body => 
+I, [2022-04-06T02:23:22.710729 #60588]  INFO -- Class:  name => clb6
+I, [2022-04-06T02:23:22.710793 #60588]  INFO -- Fly::SearchEngines:  site => clb6 url => http://clb6.cc/detail/a7b9755ae52318e2db8fea9ef2ada06779401851.html search engine => #<Fly::SCLB6Search:0x000055a5d1234f20>
+I, [2022-04-06T02:23:22.710816 #60588]  INFO -- Class:  name => clb6
+I, [2022-04-06T02:23:23.137838 #60588]  INFO -- Fly::SCLB6Search: request GET http://clb6.cc/detail/a7b9755ae52318e2db8fea9ef2ada06779401851.html body => 
+I, [2022-04-06T02:23:23.569011 #60588]  INFO -- Fly::SCLB6Search: magnet:?xt=urn:btih:A7B9755AE52318E2DB8FEA9EF2ADA06779401851
+I, [2022-04-06T02:23:23.569237 #60588]  INFO -- Class:  name => clb6
+I, [2022-04-06T02:23:23.569279 #60588]  INFO -- Fly::SearchEngines:  site => clb6 url => http://clb6.cc/detail/80ebdc0a50b042de6e7c77d41c1f526325096479.html search engine => #<Fly::SCLB6Search:0x000055a5d1234f20>
+I, [2022-04-06T02:23:23.569298 #60588]  INFO -- Class:  name => clb6
+I, [2022-04-06T02:23:23.987667 #60588]  INFO -- Fly::SCLB6Search: request GET http://clb6.cc/detail/80ebdc0a50b042de6e7c77d41c1f526325096479.html body => 
+I, [2022-04-06T02:23:25.415499 #60588]  INFO -- Fly::SCLB6Search: magnet:?xt=urn:btih:80EBDC0A50B042DE6E7C77D41C1F526325096479
+I, [2022-04-06T02:23:25.415667 #60588]  INFO -- Class:  name => clb6
+I, [2022-04-06T02:23:25.415728 #60588]  INFO -- Fly::SearchEngines:  site => clb6 url => http://clb6.cc/detail/3da274dbc55e7741b6c567f18e731c7e30cdc7eb.html search engine => #<Fly::SCLB6Search:0x000055a5d1234f20>
+I, [2022-04-06T02:23:25.415752 #60588]  INFO -- Class:  name => clb6
+I, [2022-04-06T02:23:25.840186 #60588]  INFO -- Fly::SCLB6Search: request GET http://clb6.cc/detail/3da274dbc55e7741b6c567f18e731c7e30cdc7eb.html body => 
+I, [2022-04-06T02:23:26.274300 #60588]  INFO -- Fly::SCLB6Search: magnet:?xt=urn:btih:3DA274DBC55E7741B6C567F18E731C7E30CDC7EB

@@ -24,14 +24,33 @@ module Fly
   def self.context 
     @@context ||= FlyContext.new
   end
-  CACHE_DIR = ENV["FLY_CACHE_DIR"] || File.join(ENV["HOME"],".cache","fly")
-  def self.run
-    Fly::Log.info(self,"run..")
-    begin
-      screen = Screen.new
-      screen.render
-    rescue StandardError => e
-      Fly::Log.error(self,"error #{e}")
+
+  def self.copy(str)
+      begin
+        ClipBoard.copy(str)
+      rescue 
+        puts str
+      end
+    end
+  def self.search(kw,options = {})
+    data = self.context.search(kw,options).map do |res|
+      title = "[#{res.site}]|[#{res.hot}]|[#{res.size}]|#{res.title}"
+      {name: title[0..(title.length > 80 ? 80 : title.length)],url: res.url,item: res}
+    end
+    selected = self.select data
+    if options[:download] 
+      
+    else 
+      self.copy selected.map{|item| self.context.torrent item}.join("\n")
+    end
+  end
+
+  def self.select(data)
+    prompt = TTY::Prompt.new
+    selected = prompt.multi_select("Select a resource.",echo: false,filter: true) do |menu|
+      data&.each do |item|
+        menu.choice item[:name],item[:item]
+      end
     end
   end
   class FlyContext
@@ -45,8 +64,9 @@ module Fly
       @search_cache = false
       @is_down = true
       @search_engines = SearchEngines.new
-      @download_engines = DownloadEngines.new("webtorrent")
-      @system = System.new
+      @download_engines = DownloadEngines.new
+      # @system = System.new
+      @data = []
     end
     def download_options
       { 
@@ -83,3 +103,25 @@ module Fly
     end
   end
 end
+
+options = {}
+parser = OptionParser.new do |opts|
+  # opts.banner "Search torrent source"
+  opts.on("-d","--download [DOWNLOAD]","download engine") do |download|
+    options[:download] = download
+  end
+
+  opts.on("-s","--search [KEYWORD]") do |search|
+    options[:keyword] = search
+  end
+  opts.on("-S","--site [SITE]") do |site|
+    options[:site] = site
+  end
+
+  opts.on("-v","--version") do |version |
+    options[:version] = true
+  end
+end
+parser.parse!
+raise "keyword cannot be null." unless options.include?(:keyword)
+Fly.search options[:keyword]
